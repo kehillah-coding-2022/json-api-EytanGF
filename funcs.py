@@ -17,23 +17,28 @@ def main_menu():
     json_string = response.text
     data = json.loads(json_string) #convert json string to dictionary
     exit = False
-    while not exit:
-        if choice == "3":
-            for thing in data['results']:
-    	           print(thing['title'])
-        else:
-            for thing in data['results']:
-    	           print(thing['name'])
-            choice1 = input('Make a selection')
-        if choice ==  '1':
-            print('applesauce')
-        elif choice == '2':
-            print('orange julius')
-        elif choice == '3':
-            print('exiting...')
-            exit = True
-        else:
-            print('Unrecognized input: ' + choice)
+    # while not exit:
+    not_film = []
+    film = []
+    if choice == "3":
+        for thing in data['results']:
+	           film = film + [thing['title']]
+    else:
+        for thing in data['results']:
+	           not_film = not_film + [thing['name']]
+
+    print(film)
+    print(not_film)
+        #     choice1 = input('Make a selection')
+        # if choice ==  '1':
+        #     print('applesauce')
+        # elif choice == '2':
+        #     print('orange julius')
+        # elif choice == '3':
+        #     print('exiting...')
+        #     exit = True
+        # else:
+        #     print('Unrecognized input: ' + choice)
     # return data
 
 # def sub_menu():
