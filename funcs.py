@@ -13,11 +13,13 @@ def main_menu():
     choice = input()
     if choice == "7":
         quit()
+
+
     response = requests.get('https://swapi.dev/api/' + l[int(choice) - 1])
     json_string = response.text
     data = json.loads(json_string) #convert json string to dictionary
-    exit = False
-    # while not exit:
+
+
     not_film = []
     film = []
     if choice == "3":
@@ -27,8 +29,26 @@ def main_menu():
         for thing in data['results']:
 	           not_film = not_film + [thing['name']]
 
-    print(film)
-    print(not_film)
+    numb_film = []
+    numb_not_film = []
+
+    for y in range(len(film)):
+        numb_film = numb_film + [(y + 1)]
+
+    for z in range(len(not_film)):
+        numb_not_film = numb_not_film + [(z + 1)]
+
+
+    for title in range(len(film)):
+        print(numb_film[title], "  ", film[title])
+
+    for name in range(len(not_film)):
+        print(numb_not_film[name], "  ", not_film[name])
+
+    # print(film)
+    # print(not_film)
+    # print(numb_film)
+    # print(numb_not_film)
         #     choice1 = input('Make a selection')
         # if choice ==  '1':
         #     print('applesauce')
