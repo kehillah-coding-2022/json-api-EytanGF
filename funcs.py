@@ -2,7 +2,7 @@ import json
 import requests
 
 
-def main_menu():
+def main():
     """
     Display a menu of three items, including 'exit'.
     """
@@ -35,36 +35,56 @@ def main_menu():
 
     not_film = []
     film = []
+    url_list = []
 
     if choice == "3":
         for thing in all_pages_list:
-	           film = film + [thing['title']]
+	           film.append(thing['title'])
     else:
         for thing in all_pages_list:
-	           not_film = not_film + [thing['name']]
+	           not_film.append(thing['name'])
 
-    not_film = sorted(not_film)
-    film = sorted(film)
+    for object in all_pages_list:
+        url_list.append(object['url'])
+
+    # TODO: if extra time, menus
 
     numb_film = []
     numb_not_film = []
 
+
     for y in range(len(film)):
-        numb_film = numb_film + [(y + 1)]
+        numb_film.append(y + 1)
 
     for z in range(len(not_film)):
-        numb_not_film = numb_not_film + [(z + 1)]
+        numb_not_film.append(z + 1)
 
 
-    for title in range(len(film)):
-        print(numb_film[title], "  ", film[title])
+    for i in range(len(film)):
+        num = numb_film[i]
+        title = film[i]
+        print(num, "  ", title)
 
     for name in range(len(not_film)):
         print(numb_not_film[name], "  ", not_film[name])
 
+    choice2 = int(input())
+
+    response = requests.get(url_list[(choice2 - 1)])
+    json_string = response.text
+    thing_data = json.loads(json_string) #convert json string to dictionary
+
+    for key in thing_data:
+        # modify field width and justification
+        print(key, "  ", thing_data[key])
 
 
 
+
+
+
+
+#add something at the end of each input thing to go back and to quit using [-1]
 
 
 def get_people():

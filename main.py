@@ -4,4 +4,4 @@ import requests
 
 # f.menu()
 
-f.main_menu()
+f.main()
