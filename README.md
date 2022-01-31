@@ -4,6 +4,8 @@
 
 - [Setup](#setup "Goto Setup")
 	- [Downloading Requests](#downloading-requests "Goto Downloading Requests")
+		- [Windows](#windows "Goto Windows")
+		- [Mac](#mac "Goto Mac")
 - [Functions](#functions "Goto Functions")
 - [Main Menu](#main-menu "Goto Main Menu")
 - [Sub Menu](#sub-menu "Goto Sub Menu")
@@ -34,8 +36,16 @@
 
 To install Requests, simply run this simple command in your terminal of choice:
 
+#### Windows
+
 ```python
-python -m pip install requests
+python pip install -r requirements.txt
+```
+
+#### Mac
+
+```python
+pip3 install -r requirements.txt 
 ```
 
 JSON is a part of the PSL (**P**ython **S**tandard **L**ibrary) so you do not need to download it
