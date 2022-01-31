@@ -1,4 +1,4 @@
-# Infinately Navigatable Menu of Data from the Star Wars API
+# Infinitely Navigatable Menu of Data from the Star Wars API
 
 ## Table of Contents
 
