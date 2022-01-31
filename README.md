@@ -116,7 +116,7 @@ for object in all_pages_list:
         url_list.append(object['url'])
 ```
 
-### Generating a List of Numbers which Corresponded to Titles and Names
+### Generating a List of Numbers which Correspond to the Titles and Names
 
 I then created a list of numbers which corresponded to the length of the list of films and a list of numbers which corresponded to the length of the list of everything that wasn't a film.
 
