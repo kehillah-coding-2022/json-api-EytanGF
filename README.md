@@ -48,7 +48,7 @@ python pip install -r requirements.txt
 pip3 install -r requirements.txt 
 ```
 
-JSON is a part of the PSL (**P**ython **S**tandard **L**ibrary) so you do not need to download it
+JSON is a part of the PSL (**P**ython **S**tandard **L**ibrary) so you don't need to download it
 ## Functions
 
 Function | Description
