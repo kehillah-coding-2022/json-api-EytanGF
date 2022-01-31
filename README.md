@@ -11,7 +11,7 @@
 		- [Loading First Page](#loading-first-page "Goto Loading First Page")
 		- [Loading Subsequent Pages](#loading-subsequent-pages "Goto Loading Subsequent Pages")
 		- [Loading Final Page](#loading-final-page "Goto Loading Final Page")
-	- [Generating a List of Titles/Names and URLs](#generating-a-list-of-titles-and-names-and-urls "Goto Generating a List of Titles and Names and URLs")
+	- [Generating a List of Titles and Names and URLs](#generating-a-list-of-titles-and-names-and-urls "Goto Generating a List of Titles and Names and URLs")
 		- [Generating a List of Titles](#generating-a-list-of-titles "Goto Generating a List of Titles")
 		- [Generating a List of Names](#generating-a-list-of-names "Goto Generating a List of Names")
 		- [Generating a List of URLs](#generating-a-list-of-urls "Goto Generating a List of URLs")
