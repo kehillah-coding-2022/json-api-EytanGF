@@ -38,11 +38,11 @@ def main():
     url_list = []
 
     if choice == "3":
-        for thing in all_pages_list:
-	           film.append(thing['title'])
+        for object in all_pages_list:
+	           film.append(object['title'])
     else:
-        for thing in all_pages_list:
-	           not_film.append(thing['name'])
+        for object in all_pages_list:
+	           not_film.append(object['name'])
 
     for object in all_pages_list:
         url_list.append(object['url'])
@@ -72,11 +72,70 @@ def main():
 
     response = requests.get(url_list[(choice2 - 1)])
     json_string = response.text
-    thing_data = json.loads(json_string) #convert json string to dictionary
+    object = json.loads(json_string) #convert json string to dictionary
 
-    for key in thing_data:
+
+    spc = " "
+
+    name_list = []
+    title_list = []
+
+    name_title_dict = {}
+
+    n = 1
+    for key in object:
         # modify field width and justification
-        print(key, "  ", thing_data[key])
+        value = object[key]
+        if type(value) == list:
+            for url in value:
+                data = get_dict_from_url(url)
+                if key == 'films':
+                    title_list.append(data['title'])
+                else:
+                    name_list.append(data['name'])
+                #go to list and each link in list and get name/title from each url
+                name_title_dict[n] = url
+                n = n + 1
+        elif 'https' in value:
+            for url in value:
+                 data = get_dict_from_url(value)
+                 if key == 'films':
+                    title_list.append(data['title'])
+                    name_title_dict[n] = url
+                    n = n + 1
+                 elif key != 'url':
+                    name_list.append(data['name'])
+                    name_title_dict[n] = url
+                    n = n + 1
+
+        #     for item in name_list:
+#             print("%-10s %-20s" % (n, item))
+        #     #get url and print object of name unlesss film, then print title
+
+        else:
+            print("%-10s %-10s %-20s" % (spc, key, value))
+    n = 1
+    for item in title_list:
+        print("%-10s %-20s" % (n, item))
+        n = n + 1
+    for item in name_list:
+        print("%-10s %-20s" % (n, item))
+        n = n + 1
+
+
+    choice3 = int(input())
+
+    response = requests.get(name_title_dict[choice3])
+    json_string = response.text
+    object = json.loads(json_string) #convert json string to dictionary
+    print(object)
+
+
+
+    #people objects that have urls:
+    #homeworld, films, species, vehicles,
+    #check type using type() function and do 2 values, one for urls which are strings, and others which are strings inside lists, check if https is in the strings
+    #if "https" in string
 
 
 
@@ -84,7 +143,9 @@ def main():
 
 
 
-#add something at the end of each input thing to go back and to quit using [-1]
+
+
+#add somevalue at the end of each input value to go back and to quit using [-1]
 
 
 def get_people():
@@ -99,19 +160,20 @@ def get_people():
     return data
 
 
-def get_menudata():
+def get_dict_from_url(x):
+
     """
     return a dictionary based on the json response from swapi
-    for a given person number
+    for a given url
     """
 
-    response = requests.get('https://swapi.dev/api/') #string format
+    response = requests.get(x) #string format
     json_string = response.text
     data = json.loads(json_string) #convert json string to dictionary
     return data
 
 '''
-generates 2 different random numbers for game which compares 2 different people's heights or something like that
+generates 2 different random numbers for game which compares 2 different people's heights or somevalue like that
 '''
 # a = random.randint()
 # b = random.randint()
