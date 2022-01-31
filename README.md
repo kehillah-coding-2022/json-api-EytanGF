@@ -1,5 +1,5 @@
 # Infinately Navigatable Menu of Data from the Star Wars API
-[x](#x "Goto x")
+
 ## Table of Contents
 
 - [Setup](#setup "Goto Setup")
