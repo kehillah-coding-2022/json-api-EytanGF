@@ -3,7 +3,7 @@
 ## Table of Contents
 
 - [Setup](#setup "Goto Setup")
-	- Downloading Requests
+	- [Downloading Requests](#downloading-requests "Goto Downloading Requests")
 - Functions
 - Main Menu
 - Sub Menu
