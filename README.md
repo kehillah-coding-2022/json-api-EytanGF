@@ -2,8 +2,31 @@
 
 ## Table of Contents
 
-- Setup
+- [Setup](#setup "Goto Setup")
 	- Downloading Requests
+- Functions
+- Main Menu
+- Sub Menu
+	- Loading All the Pages of the Sub Menu
+		- Loading First Page
+		- Loading Subsequent Pages
+		- Loading Final Page
+	- Generating a List of Titles/Names and URLs
+		- Generating a List of Titles
+		- Generating a List of Names
+		- Generating a List of URLs
+	- Generating a List of Numbers which Correspond to the Titles/Names
+	- Printing the Sub Menu
+	- Evaluating the User's Choice Within the Sub Menu
+- Page Menu
+	- If Value is a List
+	- If Value is not a List but it is a URL
+	- If Value is not a URL
+	- Printing the Number next to the Item
+	- Returning `Name_Title_Dict`
+- Infinte Nature of Code
+	- While Loop
+- Files
 
 ## Setup
 
@@ -16,7 +39,6 @@ python -m pip install requests
 ```
 
 JSON is a part of the PSL (**P**ython **S**tandard **L**ibrary) so you do not need to download it
-
 ## Functions
 
 Function | Description
@@ -94,7 +116,7 @@ for object in all_pages_list:
         url_list.append(object['url'])
 ```
 
-### Generating a List of Numbers which Correspond to the Titles/Names
+### Generating a List of Numbers which Corresponded to Titles/Names
 
 I then created a list of numbers which corresponded to the length of the list of films and a list of numbers which corresponded to the length of the list of everything that wasn't a film.
 
@@ -150,7 +172,7 @@ Using the data from the url provided by the sub menu, I used a separate function
 item_list = []
 ```
 
-I also created a blank dictionary called `name_title_dict` and a variable called `n` which I set at 1. The `name_title_dict` dictionary will later be returned to the `main` function to achieve the infinte quality of the code. 
+I also created a blank dictionary called `name_title_dict` and a variable called `n` which I set at 1. The `name_title_dict` dictionary will later be returned to the `main` function to achieve the infintesmal quality of the code. 
 
 ```python
     name_title_dict = {}
@@ -191,7 +213,7 @@ I then added a key/value pair to the `name_title_dict` dictionary and increased 
 name_title_dict[n] = url
 ```
 
-### If Value is not a List but it is a URL
+### If Value is not a List but It Is a URL
 
 If the value was not a list but is still a url, I generated the data from the url.
 
@@ -213,13 +235,13 @@ I would append the title/name (depending on whether the key of the value was 'fi
                     n = n + 1
 ```
 
-### If Value is not a URL
+### If Value was not a URL
 
 I would print the key next to the value shown below:
 
 ![Screenshot 2022-01-30 220458](https://user-images.githubusercontent.com/89275837/151746538-bdbfcb92-7108-4dce-8c16-a3f96487fe62.png)
 
-### Printing the Number next to the Item
+### Printing the Number Next to the Item
 
 I then reset n at 1 and looped through every item in `item_list`, printing the number next to the item and adding 1 to n each time.
 
@@ -235,7 +257,7 @@ I then reset n at 1 and looped through every item in `item_list`, printing the n
 
 At the end of the function, I returned `name_title_dict`
 
-## Infinte Nature of Code
+## Infintesmal Nature of Code
 
 Back in the `main` function, I defined `name_title_dict` as the result of putting the url chosen by the user in the sub menu through the `object_menu` function.
 
