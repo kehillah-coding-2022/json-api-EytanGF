@@ -257,7 +257,7 @@ I then reset n at 1 and looped through every item in `item_list`, printing the n
 
 At the end of the function, I returned `name_title_dict`
 
-## Infintesmal Nature of Code
+## Infinte Nature of Code
 
 Back in the `main` function, I defined `name_title_dict` as the result of putting the url chosen by the user in the sub menu through the `object_menu` function.
 
