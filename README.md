@@ -24,7 +24,7 @@
 	- [If Value is not a URL](#if-value-is-not-a-url "Goto If Value is not a URL")
 	- [Printing the Number next to the Item](#printing-the-number-next-to-the-item "Goto Printing the Number next to the Item")
 	- [Returning the Name Title Dictionary](#returning-the-name-title-dictionary "Goto Returning the Name Title Dictionary")
-- [Infinte Nature of Code](#infinite-nature-of-code "Goto Infinte Nature of Code")
+- [Infinite Nature of Code](#infinite-nature-of-code "Goto Infinite Nature of Code")
 	- [While Loop](#while-loop "Goto While Loop")
 - [Files](#files "Goto Files")
 
@@ -257,7 +257,7 @@ I then reset n at 1 and looped through every item in `item_list`, printing the n
 
 At the end of the function, I returned `name_title_dict`
 
-## Infinte Nature of Code
+## Infinite Nature of Code
 
 Back in the `main` function, I defined `name_title_dict` as the result of putting the url chosen by the user in the sub menu through the `object_menu` function.
 
