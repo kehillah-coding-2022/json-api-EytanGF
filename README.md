@@ -17,13 +17,13 @@
 		- [Generating a List of URLs](#generating-a-list-of-urls "Goto Generating a List of URLs")
 	- [Generating a List of Numbers which Correspond to the Titles and Names](#generating-a-list-of-numbers-which-correspond-to-the-title-and-names "Goto Generating a List of Numbers which Correspond to the Titles and Names")
 	- [Printing the Sub Menu](#printing-the-sub-menu "Goto Printing the Sub Menu")
-	- [Evaluating the User's Choice Within the Sub Menu](#evaluating-the-user's-choice-within-the-sub-menu "Goto Evaluating the User's Choice Within the Sub Menu")
-- Page Menu
-	- If Value is a List
-	- If Value is not a List but it is a URL
-	- If Value is not a URL
-	- Printing the Number next to the Item
-	- Returning `Name_Title_Dict`
+	- [Evaluating the Choice of the User Within the Sub Menu](#evaluating-the-choice-of-the-user-within-the-sub-menu "Evaluating the Choice of the User Within the Sub Menu")
+- [Page Menu](#page-menu "Goto Page Menu")
+	- [If Value is a List](#if-value-is-a-list "Goto If Value is a List")
+	- [If Value is not a List but it is a URL](#if-value-is-not-a-list-but-it-is-a-url "Goto If Value is not a List but it is a URL")
+	- [If Value is not a URL](#if-value-is-not-a-url "Goto If Value is not a URL")
+	- [Printing the Number next to the Item](#printing-the-number-next-to-the-item "Goto Printing the Number next to the Item")
+	- [Returning `Name_Title_Dict`](#returning-`name_title_dict` "Goto Returning `Name_Title_Dict`")
 - Infinte Nature of Code
 	- While Loop
 - Files
@@ -152,7 +152,7 @@ I then printed the numbers next to all of the names or titles (depending on what
 
 This worked because the number and title/name were indexed at the same thing.
 
-### Evaluating the User's Choice Within the Sub Menu
+### Evaluating the Choice of the User Within the Sub Menu
 
 To evaluate the user's choice within the sub menu, I requested data from the url_list indexed at the user's choice minus 1 (as lists start at 0).
 
