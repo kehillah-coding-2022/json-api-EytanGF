@@ -11,7 +11,7 @@
 		- [Loading First Page](#loading-first-page "Goto Loading First Page")
 		- [Loading Subsequent Pages](#loading-subsequent-pages "Goto Loading Subsequent Pages")
 		- [Loading Final Page](#loading-final-page "Goto Loading Final Page")
-	- [Generating a List of Titles/Names and URLs](#generating-a-list-of-titles-/-names-and-urls "Goto Generating a List of Titles/Names and URLs")
+	- [Generating a List of Titles/Names and URLs](#generating-a-list-of-titles-and-names-and-urls "Goto Generating a List of Titles and Names and URLs")
 		- Generating a List of Titles
 		- Generating a List of Names
 		- Generating a List of URLs
@@ -80,7 +80,7 @@ for result in page_data['results']:
 
 The previous for loop looped through all the pages and appended, and then requested the data for the next page. However, becaused of the while loop, the for loop never appended that last page after loading it and defining it as ```page_data``` so the for loop above appends the last page loaded in the for loop that was never appended.
 
-### Generating a List of Titles/Names and URLs
+### Generating a List of Titles and Names and URLs
 
 I then created a blank list for all objects that weren't films (which were defined under a different name; `title` instead of `name`), for all objects that were films, and for urls.
 
