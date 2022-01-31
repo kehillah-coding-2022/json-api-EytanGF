@@ -15,7 +15,7 @@
 		- [Generating a List of Titles](#generating-a-list-of-titles "Goto Generating a List of Titles")
 		- [Generating a List of Names](#generating-a-list-of-names "Goto Generating a List of Names")
 		- [Generating a List of URLs](#generating-a-list-of-urls "Goto Generating a List of URLs")
-	- [Generating a List of Numbers which Correspond to the Titles and Names](#generating-a-list-of-numbers-which-correspond-to-the-title-and-names "Goto Generating a List of Numbers which Correspond to the Titles and Names")
+	- [Generating a List of Numbers which Correspond to the Titles and Names](#generating-a-list-of-numbers-which-correspond-to-the-titles-and-names "Goto Generating a List of Numbers which Correspond to the Titles and Names")
 	- [Printing the Sub Menu](#printing-the-sub-menu "Goto Printing the Sub Menu")
 	- [Evaluating the Choice of the User Within the Sub Menu](#evaluating-the-choice-of-the-user-within-the-sub-menu "Evaluating the Choice of the User Within the Sub Menu")
 - [Page Menu](#page-menu "Goto Page Menu")
