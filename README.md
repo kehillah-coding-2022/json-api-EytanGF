@@ -12,12 +12,12 @@
 		- [Loading Subsequent Pages](#loading-subsequent-pages "Goto Loading Subsequent Pages")
 		- [Loading Final Page](#loading-final-page "Goto Loading Final Page")
 	- [Generating a List of Titles/Names and URLs](#generating-a-list-of-titles-and-names-and-urls "Goto Generating a List of Titles and Names and URLs")
-		- Generating a List of Titles
-		- Generating a List of Names
-		- Generating a List of URLs
-	- Generating a List of Numbers which Correspond to the Titles/Names
-	- Printing the Sub Menu
-	- Evaluating the User's Choice Within the Sub Menu
+		- [Generating a List of Titles](#generating-a-list-of-titles "Goto Generating a List of Titles")
+		- [Generating a List of Names](#generating-a-list-of-names "Goto Generating a List of Names")
+		- [Generating a List of URLs](#generating-a-list-of-urls "Goto Generating a List of URLs")
+	- [Generating a List of Numbers which Correspond to the Titles and Names](#generating-a-list-of-numbers-which-correspond-to-the-title-and-names "Goto Generating a List of Numbers which Correspond to the Titles and Names")
+	- [Printing the Sub Menu](#printing-the-sub-menu "Goto Printing the Sub Menu")
+	- [Evaluating the User's Choice Within the Sub Menu](#evaluating-the-user's-choice-within-the-sub-menu "Goto Evaluating the User's Choice Within the Sub Menu")
 - Page Menu
 	- If Value is a List
 	- If Value is not a List but it is a URL
@@ -116,7 +116,7 @@ for object in all_pages_list:
         url_list.append(object['url'])
 ```
 
-### Generating a List of Numbers which Corresponded to Titles/Names
+### Generating a List of Numbers which Corresponded to Titles and Names
 
 I then created a list of numbers which corresponded to the length of the list of films and a list of numbers which corresponded to the length of the list of everything that wasn't a film.
 
