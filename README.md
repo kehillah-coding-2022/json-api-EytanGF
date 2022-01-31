@@ -1,4 +1,4 @@
-# Infinately Navigatable Menu of Data from the Star Wars API
+# Infinitely Navigatable Menu of Data from the Star Wars API
 
 ## Table of Contents
 
@@ -278,4 +278,4 @@ I then created a while loop which provides the user with a new input. If the cho
 
 ## Files
 
-I used a main file [main.py](https://github.com/kehillah-coding-2022/json-api-EytanGF/blob/main/main.py) and a module file [funcs.py](https://github.com/kehillah-coding-2022/json-api-EytanGF/blob/main/funcs.py) when writing this code.
+I used a main file ([main.py](https://github.com/kehillah-coding-2022/json-api-EytanGF/blob/main/main.py)) and a module file ([funcs.py](https://github.com/kehillah-coding-2022/json-api-EytanGF/blob/main/funcs.py)) when writing this code.
