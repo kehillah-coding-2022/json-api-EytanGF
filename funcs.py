@@ -4,7 +4,7 @@ import requests
 
 def main():
     """
-    Display a menu of three items, including 'exit'.
+    Run main code which calls on a different function and runs an infinately navigatable menu of data from the Star Wars API
     """
     l = ["people", "planets", "films", "species", "vehicles", "starships", "exit"]
 
@@ -47,8 +47,6 @@ def main():
     for object in all_pages_list:
         url_list.append(object['url'])
 
-    # TODO: if extra time, menus
-
     numb_film = []
     numb_not_film = []
 
@@ -60,13 +58,15 @@ def main():
         numb_not_film.append(z + 1)
 
 
-    for i in range(len(film)):
-        num = numb_film[i]
-        title = film[i]
+    for title in range(len(film)):
+        num = numb_film[title]
+        title = film[title]
         print(num, "  ", title)
 
     for name in range(len(not_film)):
-        print(numb_not_film[name], "  ", not_film[name])
+        num = numb_not_film[name]
+        name = not_film[name]
+        print(num, "  ", name)
 
     choice2 = int(input())
 
@@ -74,7 +74,7 @@ def main():
     json_string = response.text
     object = json.loads(json_string) #convert json string to dictionary
 
-    name_title_dict = page_menu(object)
+    name_title_dict = object_menu(object)
 
     while(True):
         choice3 = int(input())
@@ -83,92 +83,63 @@ def main():
         response = requests.get(name_title_dict[choice3])
         json_string = response.text
         object = json.loads(json_string) #convert json string to dictionary
-        name_title_dict = page_menu(object)
+        name_title_dict = object_menu(object)
 
 
-def page_menu(object):
+def object_menu(object):
+    '''
+    Generate the interactive menu of a page given an object
+    '''
     spc = " "
 
-    #name_list = []
-    #title_list = []
     item_list = []
 
     name_title_dict = {}
 
     n = 1
-#    print(object)
+
     for key in object:
-        # modify field width and justification
         value = object[key]
-        #print(key)
-        #print(value)
+
 
         if type(value) == list:
             for url in value:
+
                 data = get_dict_from_url(url)
+
                 if key == 'films':
                     item_list.append(data['title'])
+
                 else:
                     item_list.append(data['name'])
-                #go to list and each link in list and get name/title from each url
+
                 name_title_dict[n] = url
                 n = n + 1
+
         elif type(value) == str and 'https' in value:
+
                 data = get_dict_from_url(value)
+
                 if key == 'films':
                     item_list.append(data['title'])
                     name_title_dict[n] = value
                     n = n + 1
+
                 elif key != 'url':
                     item_list.append(data['name'])
                     name_title_dict[n] = value
                     n = n + 1
 
-        #     for item in name_list:
-#             print("%-10s %-20s" % (n, item))
-        #     #get url and print object of name unlesss film, then print title
-
         else:
             print("%-10s %-10s %-20s" % (spc, key, value))
 
     n = 1
+
     for item in item_list:
         print("%-10s %-20s" % (n, item))
         n = n + 1
-#    for item in name_list:
-#        print("%-10s %-20s" % (n, item))
-#        n = n + 1
 
     return(name_title_dict)
-
-
-
-    #people objects that have urls:
-    #homeworld, films, species, vehicles,
-    #check type using type() function and do 2 values, one for urls which are strings, and others which are strings inside lists, check if https is in the strings
-    #if "https" in string
-
-
-
-
-
-
-
-
-
-#add somevalue at the end of each input value to go back and to quit using [-1]
-
-
-def get_people():
-    """
-    return a dictionary based on the json response from swapi
-    for a given person number
-    """
-
-    response = requests.get('http://swapi.co/api/people/%s/' % n) #string format
-    json_string = response.text
-    data = json.loads(json_string) #convert json string to dictionary
-    return data
 
 
 def get_dict_from_url(x):
@@ -182,12 +153,3 @@ def get_dict_from_url(x):
     json_string = response.text
     data = json.loads(json_string) #convert json string to dictionary
     return data
-
-'''
-generates 2 different random numbers for game which compares 2 different people's heights or somevalue like that
-'''
-# a = random.randint()
-# b = random.randint()
-#
-# while a == b:
-#     a = random.randint()
