@@ -1,17 +1,17 @@
 # Infinately Navigatable Menu of Data from the Star Wars API
-
+[x](#x "Goto x")
 ## Table of Contents
 
 - [Setup](#setup "Goto Setup")
 	- [Downloading Requests](#downloading-requests "Goto Downloading Requests")
-- Functions
-- Main Menu
-- Sub Menu
-	- Loading All the Pages of the Sub Menu
-		- Loading First Page
-		- Loading Subsequent Pages
-		- Loading Final Page
-	- Generating a List of Titles/Names and URLs
+- [Functions](#functions "Goto Functions")
+- [Main Menu](#main-menu "Goto Main Menu")
+- [Sub Menu](#sub-menu "Goto Sub Menu")
+	- [Loading All the Pages of the Sub Menu](#loading-all-the-pages-of-the-sub-menu "Goto Loading All the Pages of the Sub Menu")
+		- [Loading First Page](#loading-first-page "Goto Loading First Page")
+		- [Loading Subsequent Pages](#loading-subsequent-pages "Goto Loading Subsequent Pages")
+		- [Loading Final Page](#loading-final-page "Goto Loading Final Page")
+	- [Generating a List of Titles/Names and URLs](#generating-a-list-of-titles/names-and-urls "Goto Generating a List of Titles/Names and URLs")
 		- Generating a List of Titles
 		- Generating a List of Names
 		- Generating a List of URLs
