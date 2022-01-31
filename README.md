@@ -23,10 +23,10 @@
 	- [If Value is not a List but it is a URL](#if-value-is-not-a-list-but-it-is-a-url "Goto If Value is not a List but it is a URL")
 	- [If Value is not a URL](#if-value-is-not-a-url "Goto If Value is not a URL")
 	- [Printing the Number next to the Item](#printing-the-number-next-to-the-item "Goto Printing the Number next to the Item")
-	- [Returning `Name_Title_Dict`](#returning-name-title-dict "Goto Returning `Name_Title_Dict`")
-- Infinte Nature of Code
-	- While Loop
-- Files
+	- [Returning the Name Title Dictionary](#returning-the-name-title-dictionary "Goto Returning the Name Title Dictionary")
+- [Infinte Nature of Code](#infinite-nature-of-code "Goto Infinte Nature of Code")
+	- [While Loop](#while-loop "Goto While Loop")
+- [Files](#files "Goto Files")
 
 ## Setup
 
@@ -253,7 +253,7 @@ I then reset n at 1 and looped through every item in `item_list`, printing the n
         n = n + 1
 ```
 
-### Returning `Name_Title_Dict`
+### Returning the Name Title Dictionary
 
 At the end of the function, I returned `name_title_dict`
 
