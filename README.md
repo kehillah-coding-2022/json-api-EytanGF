@@ -235,7 +235,7 @@ I would append the title/name (depending on whether the key of the value was 'fi
                     n = n + 1
 ```
 
-### If Value was not a URL
+### If Value is not a URL
 
 I would print the key next to the value shown below:
 
