@@ -23,7 +23,7 @@
 	- [If Value is not a List but it is a URL](#if-value-is-not-a-list-but-it-is-a-url "Goto If Value is not a List but it is a URL")
 	- [If Value is not a URL](#if-value-is-not-a-url "Goto If Value is not a URL")
 	- [Printing the Number next to the Item](#printing-the-number-next-to-the-item "Goto Printing the Number next to the Item")
-	- [Returning `Name_Title_Dict`](#returning-`name_title_dict` "Goto Returning `Name_Title_Dict`")
+	- [Returning `Name_Title_Dict`](#returning-name-title-dict "Goto Returning `Name_Title_Dict`")
 - Infinte Nature of Code
 	- While Loop
 - Files
