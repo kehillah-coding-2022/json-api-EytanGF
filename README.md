@@ -49,7 +49,7 @@ Function | Description
 
 ## Main Menu
 
-I manually made a list of the 6 submenus plus an exit button and then printed the submenu to the right of a number:
+I manually made a list of the 6 submenus plus an exit button and then printed each submenu to the right of it's corresponding number:
 
 ![Screenshot 2022-01-30 205756](https://user-images.githubusercontent.com/89275837/151741191-268d4393-e3f9-4c26-aa2e-2050c0100e7d.png)
 
