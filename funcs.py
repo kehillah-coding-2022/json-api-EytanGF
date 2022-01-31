@@ -74,38 +74,54 @@ def main():
     json_string = response.text
     object = json.loads(json_string) #convert json string to dictionary
 
+    name_title_dict = page_menu(object)
 
+    while(True):
+        choice3 = int(input())
+        if len(name_title_dict) < choice3:
+            break
+        response = requests.get(name_title_dict[choice3])
+        json_string = response.text
+        object = json.loads(json_string) #convert json string to dictionary
+        name_title_dict = page_menu(object)
+
+
+def page_menu(object):
     spc = " "
 
-    name_list = []
-    title_list = []
+    #name_list = []
+    #title_list = []
+    item_list = []
 
     name_title_dict = {}
 
     n = 1
+#    print(object)
     for key in object:
         # modify field width and justification
         value = object[key]
+        #print(key)
+        #print(value)
+
         if type(value) == list:
             for url in value:
                 data = get_dict_from_url(url)
                 if key == 'films':
-                    title_list.append(data['title'])
+                    item_list.append(data['title'])
                 else:
-                    name_list.append(data['name'])
+                    item_list.append(data['name'])
                 #go to list and each link in list and get name/title from each url
                 name_title_dict[n] = url
                 n = n + 1
-        elif 'https' in value:
-            for url in value:
-                 data = get_dict_from_url(value)
-                 if key == 'films':
-                    title_list.append(data['title'])
-                    name_title_dict[n] = url
+        elif type(value) == str and 'https' in value:
+                data = get_dict_from_url(value)
+                if key == 'films':
+                    item_list.append(data['title'])
+                    name_title_dict[n] = value
                     n = n + 1
-                 elif key != 'url':
-                    name_list.append(data['name'])
-                    name_title_dict[n] = url
+                elif key != 'url':
+                    item_list.append(data['name'])
+                    name_title_dict[n] = value
                     n = n + 1
 
         #     for item in name_list:
@@ -114,21 +130,16 @@ def main():
 
         else:
             print("%-10s %-10s %-20s" % (spc, key, value))
+
     n = 1
-    for item in title_list:
+    for item in item_list:
         print("%-10s %-20s" % (n, item))
         n = n + 1
-    for item in name_list:
-        print("%-10s %-20s" % (n, item))
-        n = n + 1
+#    for item in name_list:
+#        print("%-10s %-20s" % (n, item))
+#        n = n + 1
 
-
-    choice3 = int(input())
-
-    response = requests.get(name_title_dict[choice3])
-    json_string = response.text
-    object = json.loads(json_string) #convert json string to dictionary
-    print(object)
+    return(name_title_dict)
 
 
 
