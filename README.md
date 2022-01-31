@@ -45,8 +45,8 @@ Function | Description
 ------------- | -------------
 `main`  | Run main code which calls on a different function and runs an infinately navigatable menu of data from the Star Wars API
 `object_menu`  | Generate the interactive menu of a page given an object
-`get_dict_from_url`  | `Return a dictionary based on the json response from swapi
-    for a given url`
+`get_dict_from_url`  | Return a dictionary based on the json response from swapi for a given url
+
 ## Main Menu
 
 I manually made a list of the 6 submenus plus an exit button and then printed the submenu to the right of a number:
